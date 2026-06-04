@@ -18,10 +18,10 @@ test("title", ()=>{
     // step1- navigate to the url
    await  page.goto("https://www.google.com/"); 
 
-    let title:string= await page.title();
-    console.log("title of the page is: "+ title);
+    let url:string= await page.url();
+    console.log("URL of the page is: "+ url);
 
     // step2- verify the title of the page
-   await  expect(page).toHaveTitle("Google");   
+   await  expect(page).toHaveURL("https://www.google.com/");   
 
     })

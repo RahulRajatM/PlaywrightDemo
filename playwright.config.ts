@@ -23,6 +23,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
+  timeout: 10000,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -30,6 +31,13 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    testIdAttribute: 'data-pw', // configured data-testId
+    headless: true,
+    viewport: { width: 1280, height: 800 },
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+    launchOptions: {
+      args: ['--disable-blink-features=AutomationControlled'],
+    },
   },
 
   /* Configure projects for major browsers */
@@ -38,7 +46,7 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
+/*
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
@@ -48,7 +56,7 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-
+*/
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

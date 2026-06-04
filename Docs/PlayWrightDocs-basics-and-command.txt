@@ -1,4 +1,11 @@
 
+
+// https://playwright.dev/docs/intro
+
+// https://playwright.dev/docs/writing-tests
+
+//https://playwright.dev/docs/running-tests
+
 1. npx playwright test 
 Runs end to end tests using the Playwright Test Runner.
 
@@ -45,4 +52,21 @@ npx playwright codegen <url>
 Replace <url> with the URL of the web page you want to interact with. This command will open a browser window where you can interact with the page. As you perform actions on the page (such as clicking buttons, filling out forms, etc.), the Playwright Code Generator will generate corresponding code snippets in real time.
 
 You can copy these code snippets and use them in your test scripts to automate similar interactions in your tests.  
+
+==================================================================================
+npx playwright show-report // opens the test report in the default web browser. The test report provides a detailed overview of the test results, including which tests passed, which tests failed, and any error messages or stack traces associated with failed tests.
+
+npx playwright test --headed // runs the tests in headed mode, which means that the browser will be visible during test execution. This can be useful for debugging and visually verifying the behavior of your tests.
+
+npx playwright test testfile.spec.ts // runs the tests defined in the specified test file
+
+npx playwright test --project==chromium // runs tests only on chromium browser
+
+npx playwright test -g "verify"   // maching with the test title 
+
+npx playwright test --ui   // runs the test in playwright test runner UI mode
+
+npx playwright test mytest.spec.ts --debug  // runs the test in debug mode, allowing you to step through the test and inspect the state of the browser. 
+
+npx playwright test --last-failed  // runs only the tests that failed in the previous test run. This is useful for quickly re-running failed tests without having to run the entire test suite again.
 
