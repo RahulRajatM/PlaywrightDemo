@@ -1,0 +1,48 @@
+
+1. npx playwright test 
+Runs end to end tests using the Playwright Test Runner.
+
+The Playwright Test Runner is a test framework built on top of Playwright. It provides a simple and powerful API for writing end to end tests, as well as a rich set of features for running and debugging tests.
+
+To use the Playwright Test Runner, you need to create a configuration file called playwright.config.ts. This file contains the configuration for your tests, such as the browsers you want to test against, the test files to run, and any other settings you want to customize.
+
+Here is an example of a basic playwright.config.ts file:
+
+npx playwright test --config=playwright.config.ts
+
+This command will run all the tests defined in the playwright.config.ts file. You can also specify a specific test file or test suite to run by using the --test option:
+
+==================================================================
+
+
+2. npx playwright test --ui -- Runs the Playwright Test Runner in interactive mode, allowing you to select and run tests from a graphical user interface.
+
+When you run the Playwright Test Runner in interactive mode, it will open a graphical user interface (GUI) that allows you to select and run tests. You can filter tests by name, tag, or file, and you can also see the test results in real time.
+
+To run the Playwright Test Runner in interactive mode, use the following command:
+
+npx playwright test --ui
+
+This command will start the Playwright Test Runner in interactive mode. You can then select the tests you want to run from the GUI and see the results as they are executed.    
+
+
+3.npx playwright test --debug -- Runs the Playwright Test Runner in debug mode, allowing you to step through your tests and inspect the state of the browser.   
+When you run the Playwright Test Runner in debug mode, it will pause the execution of your tests at the first line of code. You can then step through your tests line by line, inspect the state of the browser, and see the values of variables.
+
+To run the Playwright Test Runner in debug mode, use the following command:
+
+npx playwright test --debug
+
+This command will start the Playwright Test Runner in debug mode. You can then step through your tests and inspect the state of the browser to help identify any issues or bugs in your tests.  
+
+4. npx playwright codegen -- Generates code snippets for Playwright actions based on user interactions with a web page. 
+The Playwright Code Generator is a tool that allows you to generate code snippets for Playwright actions based on your interactions with a web page. This can be useful for quickly creating test scripts or for learning how to use the Playwright API.
+
+To use the Playwright Code Generator, run the following command:
+
+npx playwright codegen <url>
+
+Replace <url> with the URL of the web page you want to interact with. This command will open a browser window where you can interact with the page. As you perform actions on the page (such as clicking buttons, filling out forms, etc.), the Playwright Code Generator will generate corresponding code snippets in real time.
+
+You can copy these code snippets and use them in your test scripts to automate similar interactions in your tests.  
+
