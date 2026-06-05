@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playwright Locator Practice</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f5f5f5;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        input, select, textarea {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Playwright Locator Practice Page</h1>
+
+<!-- getByRole -->
+<section>
+    <h2>Role Locators</h2>
+
+    <button>Login</button>
+    <button>Register</button>
+    <button>Submit</button>
+
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Contact Us</a>
+</section>
+
+<!-- getByLabel -->
+<section>
+    <h2>Label Locators</h2>
+
+    <label for="fname">First Name</label>
+    <input id="fname" type="text">
+
+    <label for="email">Email Address</label>
+    <input id="email" type="email">
+
+    <label for="password">Password</label>
+    <input id="password" type="password">
+</section>
+
+<!-- getByPlaceholder -->
+<section>
+    <h2>Placeholder Locators</h2>
+
+    <input placeholder="Enter username">
+    <input placeholder="Enter mobile number">
+    <input placeholder="Search products">
+</section>
+
+<!-- getByText -->
+<section>
+    <h2>Text Locators</h2>
+
+    <p>Welcome to Playwright Learning.</p>
+    <p>Automation Testing Practice Page.</p>
+    <p>Learn Locators Effectively.</p>
+</section>
+
+<!-- getByAltText -->
+<section>
+    <h2>Alt Text Locator</h2>
+
+    <img
+        src="https://via.placeholder.com/150"
+        alt="Playwright Logo">
+
+    <img
+        src="https://via.placeholder.com/150"
+        alt="Testing Image">
+</section>
+
+<!-- getByTitle -->
+<section>
+    <h2>Title Locator</h2>
+
+    <button title="Save Record">Save</button>
+    <button title="Delete Record">Delete</button>
+    <button title="Update Record">Update</button>
+</section>
+
+<!-- getByTestId -->
+<section>
+    <h2>Test ID Locator</h2>
+
+    <button data-testid="login-btn">Login Button</button>
+    <button data-testid="logout-btn">Logout Button</button>
+    <button data-testid="checkout-btn">Checkout Button</button>
+</section>
+
+<!-- Dropdown -->
+<section>
+    <h2>Dropdown</h2>
+
+    <label for="country">Country</label>
+    <select id="country">
+        <option>India</option>
+        <option>USA</option>
+        <option>Canada</option>
+        <option>Australia</option>
+    </select>
+</section>
+
+<!-- Checkbox -->
+<section>
+    <h2>Checkboxes</h2>
+
+    <input type="checkbox" id="java">
+    <label for="java">Java</label>
+
+    <input type="checkbox" id="python">
+    <label for="python">Python</label>
+
+    <input type="checkbox" id="playwright">
+    <label for="playwright">Playwright</label>
+</section>
+
+<!-- Radio -->
+<section>
+    <h2>Radio Buttons</h2>
+
+    <input type="radio" name="gender" id="male">
+    <label for="male">Male</label>
+
+    <input type="radio" name="gender" id="female">
+    <label for="female">Female</label>
+</section>
+
+<!-- List -->
+<section>
+    <h2>Product List</h2>
+
+    <ul id="products">
+        <li>iPhone 16</li>
+        <li>Samsung S25</li>
+        <li>Google Pixel 10</li>
+        <li>OnePlus 15</li>
+    </ul>
+</section>
+
+<!-- Table -->
+<section>
+    <h2>Employee Table</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Rahul</td>
+            <td>QA</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Amit</td>
+            <td>Dev</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Priya</td>
+            <td>HR</td>
+        </tr>
+    </table>
+</section>
+
+<!-- nth(), first(), last() -->
+<section>
+    <h2>Multiple Similar Buttons</h2>
+
+    <button class="action-btn">Action 1</button>
+    <button class="action-btn">Action 2</button>
+    <button class="action-btn">Action 3</button>
+    <button class="action-btn">Action 4</button>
+    <button class="action-btn">Action 5</button>
+</section>
+
+<!-- Form -->
+<section>
+    <h2>Feedback Form</h2>
+
+    <textarea
+        placeholder="Enter your feedback"></textarea>
+
+    <button>Send Feedback</button>
+</section>
+
+</body>
+</html>
